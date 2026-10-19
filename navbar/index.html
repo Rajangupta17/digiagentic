@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiAgentic Navbar Component</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DigiAgentic" />
+    <meta property="og:image" content="https://digiagentic.in/assets/DigiAgentic_logo_pack/01_full_colour/fullcolour_horizontal_4096.png" />
+    <meta property="og:image:width" content="4096" />
+    <meta property="og:image:height" content="1024" />
+    <meta name="theme-color" content="#212467" />
+    <meta property="og:url" content="https://digiagentic.in/navbar/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="/" class="brand" aria-label="DigiAgentic home">
+          <img src="../assets/DigiAgentic_logo_transparent.png" alt="DigiAgentic logo" />
+        </a>
+
+        <button class="search-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="5.5"></circle>
+            <path d="M16 16L21 21"></path>
+          </svg>
+        </button>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div class="menu-panel">
+          <form class="search-form" role="search" action="/" method="get">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="5.5"></circle>
+              <path d="M16 16L21 21"></path>
+            </svg>
+            <input class="search-input" type="search" name="q" placeholder="Search..." aria-label="Search the site" />
+          </form>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li class="has-dropdown">
+                <a href="../services/">Services <span class="caret">▾</span></a>
+                <div class="mini-menu">
+                  <a href="../services/foundation/index.html">01 / Foundation</a>
+                  <a href="../services/visibility/index.html">02 / Visibility</a>
+                  <a href="../services/credibility/index.html">03 / Credibility</a>
+                  <a href="../services/growth/index.html">04 / Growth</a>
+                </div>
+              </li>
+
+              <li class="has-dropdown">
+                <a href="/work/">Work <span class="caret">▾</span></a>
+                <div class="mini-menu">
+                  <a href="/work/?service=brand">By service</a>
+                  <a href="/work/?result=visibility">By result</a>
+                  <a href="/work/case-study/">Case study</a>
+                </div>
+              </li>
+
+              <li class="has-dropdown">
+                <a href="/about/">About <span class="caret">▾</span></a>
+                <div class="mini-menu">
+                  <a href="/about/why-us/">Why Us</a>
+                  <a href="/about/our-approach/">Our Approach</a>
+                  <a href="/blog/">Blog</a>
+                  <a href="/faq/">FAQs</a>
+                  <a href="/contact/">Contact</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="nav-actions">
+            <a href="/free-digital-presence-audit/" class="audit-btn">Get a Free Audit</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

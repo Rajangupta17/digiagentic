@@ -1,0 +1,13 @@
+DigiAgentic brand palette (sampled from the logo artwork)
+========================================================
+
+navy     #212467   RGB(33, 36, 103)
+orange   #F89B00   RGB(248, 155, 0)
+yellow   #FBC731   RGB(251, 199, 49)
+teal     #208281   RGB(32, 130, 129)
+slate    #6B7186   RGB(107, 113, 134)
+black    #0D0D12   RGB(13, 13, 18)
+white    #FFFFFF   RGB(255, 255, 255)
+
+Navy and orange are the primary pair. Yellow is the highlight end
+of the emblem gradient, teal is the sphere accent, slate is the rule line.

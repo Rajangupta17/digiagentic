@@ -1,0 +1,542 @@
+/* ============================================================
+   cms.css — styles for CMS-rendered pages (Wagtail templates).
+   Mirrors the inline styles previously used on privacy-policy,
+   terms-of-service and faq pages, so CMS pages look identical.
+   Loaded by templates/base.html after the existing stylesheets.
+   ============================================================ */
+
+/* ---- Page hero (kicker + title + intro line) ---- */
+.cms-hero {
+  padding: 120px 0 32px;
+}
+
+.landing-page .cms-hero-title {
+  color: var(--page-indigo);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+
+.cms-hero-intro {
+  color: var(--page-slate);
+  font-size: 0.95rem;
+  margin: 0 0 48px;
+  max-width: 640px;
+}
+
+/* ---- Rich-text body (WordPress-style content) ---- */
+.cms-body {
+  padding-bottom: 64px;
+}
+
+.cms-prose {
+  max-width: 760px;
+  color: var(--page-ink);
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.cms-prose h2,
+.cms-prose h3,
+.cms-prose h4 {
+  font-family: "Poppins", sans-serif;
+  color: var(--page-indigo);
+  line-height: 1.25;
+  margin: 32px 0 12px;
+}
+
+.cms-prose h2 { font-size: 1.25rem; }
+.cms-prose h3 { font-size: 1.1rem; }
+.cms-prose h4 { font-size: 1rem; }
+
+.cms-prose p { margin: 0 0 16px; }
+
+.cms-prose a {
+  color: var(--page-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cms-prose a:hover { color: var(--page-teal); }
+
+.cms-prose ul,
+.cms-prose ol {
+  padding-left: 24px;
+  margin: 0 0 16px;
+}
+
+.cms-prose li { margin-bottom: 6px; }
+
+.cms-prose blockquote {
+  margin: 24px 0;
+  padding: 16px 22px;
+  border-left: 3px solid var(--page-gold);
+  background: #fff;
+  border-radius: 0 12px 12px 0;
+  color: var(--page-slate);
+}
+
+.cms-prose hr {
+  border: 0;
+  border-top: 1px solid var(--page-rule);
+  margin: 32px 0;
+}
+
+.cms-prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 8px 0 16px;
+}
+
+.cms-prose .responsive-object {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 16px 0;
+}
+
+.cms-prose .responsive-object iframe,
+.cms-prose .responsive-object embed,
+.cms-prose .responsive-object object {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* ---- FAQ accordion (used by the FAQ page template) ---- */
+.cms-faq-group { max-width: 760px; margin: 0 auto 32px; }
+
+.cms-faq-group-title {
+  font-family: "Poppins", sans-serif;
+  color: var(--page-teal);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.cms-faq {
+  border: 1px solid var(--page-rule);
+  border-radius: 12px;
+  padding: 0;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.cms-faq summary {
+  padding: 20px 24px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--page-indigo);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cms-faq summary::-webkit-details-marker { display: none; }
+
+.cms-faq-toggle {
+  color: var(--page-teal);
+  font-size: 1.2rem;
+  transition: transform 200ms ease;
+}
+
+.cms-faq[open] .cms-faq-toggle { transform: rotate(45deg); }
+
+.cms-faq-answer {
+  padding: 0 24px 20px;
+  color: var(--page-slate);
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .cms-hero { padding-top: 96px; }
+  .cms-faq summary { padding: 16px 18px; }
+  .cms-faq-answer { padding: 0 18px 16px; }
+}
+
+/* ============================================================
+   Blog — listing (/blog/) and single post (/blog/<slug>/)
+   Values copied from the inline styles of the old static pages.
+   ============================================================ */
+
+/* ---- Listing hero ---- */
+.blog-hero { padding: 120px 0 60px; }
+
+.landing-page .blog-hero-title {
+  color: var(--page-indigo);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+
+.blog-hero-intro {
+  max-width: 640px;
+  font-size: 1.1rem;
+  color: var(--page-slate);
+  margin: 0 0 48px;
+}
+.blog-hero-intro p { margin: 0; }
+
+/* ---- Card grid ---- */
+.blog-list { padding-bottom: 64px; }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--page-rule);
+  background: #fff;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--page-gold);
+  box-shadow: 0 16px 36px rgba(33, 36, 103, 0.12);
+}
+
+.blog-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  text-decoration: none;
+  overflow: hidden;
+}
+.blog-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.blog-card-media--indigo { background: var(--page-indigo); }
+.blog-card-media--teal   { background: var(--page-teal); }
+.blog-card-media--ink    { background: #14172e; }
+
+.blog-card-placeholder {
+  padding: 24px;
+  color: var(--page-gold);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.3;
+}
+.blog-card-media--teal .blog-card-placeholder { color: #fff; }
+
+.blog-card-body { padding: 22px 24px 26px; }
+
+.blog-card-category,
+.blog-post-category {
+  margin: 0 0 6px;
+  color: var(--page-teal);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.landing-page .blog-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--page-indigo);
+  margin: 0 0 8px;
+}
+.blog-card-title a { color: inherit; text-decoration: none; }
+.blog-card-title a:hover { color: var(--page-teal); }
+
+.blog-card-excerpt {
+  color: var(--page-slate);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.blog-card-meta {
+  color: var(--page-slate);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  margin: 0 0 14px;
+}
+
+.blog-card-link {
+  color: var(--page-teal);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.blog-card-link:hover { text-decoration: underline; }
+
+.blog-empty {
+  color: var(--page-slate);
+  font-size: 1.05rem;
+  padding: 24px 0 48px;
+}
+
+/* ---- Single post ---- */
+.blog-post {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 120px 24px 64px;
+}
+
+.blog-post-breadcrumb {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  color: var(--page-slate);
+}
+.blog-post-breadcrumb a { color: var(--page-teal); text-decoration: none; }
+.blog-post-breadcrumb span[aria-hidden] { margin: 0 8px; }
+
+.blog-post-category { margin-bottom: 10px; }
+
+.landing-page .blog-post-title {
+  color: var(--page-indigo);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+.blog-post-meta {
+  color: var(--page-slate);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  margin: 0 0 40px;
+}
+
+.blog-post-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 0 0 36px;
+  display: block;
+}
+
+/* body: slightly larger rhythm than StandardPage prose */
+.blog-post-body { line-height: 1.85; max-width: none; }
+.blog-post-body > p:first-child { font-size: 1.1rem; }
+.blog-post-body p { margin: 0 0 28px; }
+.blog-post-body h2 { font-size: 1.4rem; font-weight: 600; margin: 40px 0 14px; }
+.blog-post-body h3 { font-size: 1.15rem; font-weight: 600; margin: 32px 0 12px; }
+
+.blog-post-related {
+  margin-top: 48px;
+  padding: 24px;
+  border: 1px solid var(--page-rule);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.blog-post-related-label {
+  margin: 0 0 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--page-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.blog-post-related-links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.blog-post-related-links a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--page-rule);
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--page-indigo);
+  text-decoration: none;
+}
+.blog-post-related-links a:hover { border-color: var(--page-gold); }
+
+.blog-post-tags {
+  margin: 28px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--page-slate);
+}
+
+@media (max-width: 640px) {
+  .blog-hero { padding-top: 96px; }
+  .blog-post { padding-top: 96px; }
+}
+
+/* ============================================================
+   Flexible page blocks (About, Why Us, Our Approach, Free Audit)
+   Values copied from the inline styles of the old static pages.
+   ============================================================ */
+.cms-hero--simple { padding: 120px 0 60px; }
+.cms-hero-intro--lg { font-size: 1.1rem; }
+.cms-section { padding-bottom: 60px; }
+.cms-band + .cms-section { padding-top: 64px; }
+.cms-section--timeline { padding-bottom: 72px; }
+
+/* ---- Cards grid ---- */
+.cms-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--cms-card-min, 280px), 1fr));
+  gap: 32px;
+}
+.cms-card {
+  display: block;
+  padding: 32px;
+  border: 1px solid var(--page-rule);
+  border-radius: 16px;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+}
+.cms-card--link { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.cms-card--link:hover { transform: translateY(-4px); border-color: var(--page-gold); box-shadow: 0 14px 32px rgba(33, 36, 103, 0.1); }
+.landing-page .cms-card-title { font-size: 1.4rem; margin: 0 0 12px; color: var(--page-indigo); }
+.landing-page .cms-card--link .cms-card-title { font-size: 1.2rem; margin-bottom: 8px; }
+.cms-card-text { color: var(--page-slate); line-height: 1.75; margin: 0; }
+
+/* ---- Numbered cards ---- */
+.cms-numbered { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.cms-numbered-card { padding: 32px; border: 1px solid var(--page-rule); border-radius: 16px; background: #fff; }
+.cms-numbered-badge {
+  display: block; width: 48px; height: 48px; border-radius: 10px;
+  background: var(--page-indigo); color: var(--page-gold);
+  font-family: "Poppins", sans-serif; font-size: 1.2rem; font-weight: 800; line-height: 48px; text-align: center;
+  margin-bottom: 20px;
+}
+.landing-page .cms-numbered-card h3 { font-size: 1.15rem; margin: 0 0 10px; color: var(--page-indigo); }
+.cms-numbered-card p { color: var(--page-slate); line-height: 1.75; margin: 0; }
+
+/* ---- Timeline / process steps ---- */
+.cms-timeline { display: grid; gap: 0; position: relative; }
+.cms-timeline-line { position: absolute; left: 31px; top: 48px; bottom: 48px; width: 2px; background: var(--page-rule); }
+.cms-timeline-step { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 32px 0; position: relative; }
+.cms-timeline-badge {
+  display: flex; width: 64px; height: 64px; border-radius: 50%;
+  background: var(--page-indigo); color: var(--page-gold);
+  font-family: "Poppins", sans-serif; font-size: 1.1rem; font-weight: 800;
+  align-items: center; justify-content: center; position: relative; z-index: 1;
+}
+.cms-timeline-badge.is-last { background: var(--page-teal); color: #fff; }
+.landing-page .cms-timeline-step h3 { font-size: 1.2rem; margin: 0 0 8px; color: var(--page-indigo); }
+.cms-timeline-step p { color: var(--page-slate); line-height: 1.75; margin: 0; }
+
+/* ---- Dark band ---- */
+.cms-band { background: var(--page-indigo); padding: 64px 0; }
+.cms-band-inner { width: min(var(--page-content-width), calc(100% - 48px)); margin-inline: auto; }
+.cms-band-kicker { color: var(--page-gold); }
+.landing-page .cms-band-heading { color: #fff; margin-bottom: 32px; }
+.cms-band-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.cms-band-item {
+  display: block; padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px;
+  text-decoration: none; color: inherit;
+}
+.cms-band-item--link { transition: border-color 180ms ease, transform 180ms ease; }
+.cms-band-item--link:hover { border-color: var(--page-gold); transform: translateY(-3px); }
+.cms-band-label {
+  color: var(--page-gold); font-family: "Poppins", sans-serif;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.landing-page .cms-band-item h3 { color: #fff; font-size: 1.1rem; margin: 10px 0 8px; }
+.cms-band-item p { color: #fff; margin: 10px 0 0; font-size: 0.95rem; line-height: 1.6; }
+.landing-page .cms-band-item h3 + p { color: rgba(255, 255, 255, 0.75); margin-top: 0; }
+
+/* ---- Figure ---- */
+.cms-figure { margin: 0; }
+.cms-figure img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.cms-figure figcaption { color: var(--page-slate); font-size: 0.9rem; margin-top: 10px; }
+
+/* ============================================================
+   Work — listing (/work/) and case study
+   ============================================================ */
+.work-hero { padding: 120px 0 60px; }
+.landing-page .work-hero-title {
+  color: var(--page-indigo); font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; margin: 0 0 16px; text-wrap: balance;
+}
+.work-hero-intro { max-width: 640px; font-size: 1.1rem; color: var(--page-slate); margin: 0 0 48px; }
+.work-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.work-filters .button { min-height: 40px; padding: 0 18px; font-size: 0.82rem; cursor: pointer; }
+.work-filters .button:not(.button-primary) { border: 1px solid var(--page-rule); background: #fff; color: var(--page-indigo); }
+.work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; }
+.work-card {
+  border-radius: 8px; overflow: hidden; border: 1px solid var(--page-rule); background: var(--page-mist);
+  transition: transform 240ms ease-out, box-shadow 240ms ease-out;
+}
+.work-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(33, 36, 103, 0.12); }
+.work-card[hidden] { display: none; }
+.work-card-media { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 10; overflow: hidden; text-decoration: none; }
+.work-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.work-card-media--indigo { background: var(--page-indigo); }
+.work-card-media--teal { background: var(--page-teal); }
+.work-card-media--ink { background: #14172e; }
+.work-card-placeholder { padding: 32px; color: var(--page-gold); font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.4rem; text-align: center; line-height: 1.3; }
+.work-card-media--teal .work-card-placeholder { color: var(--page-mist); }
+.work-card-body { padding: 24px; }
+.work-card-kicker { margin: 0 0 8px; color: var(--page-teal); font-family: "Poppins", sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.landing-page .work-card-title { margin: 0 0 8px; font-family: "Poppins", sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--page-indigo); }
+.work-card-title a { color: inherit; text-decoration: none; }
+.work-card-text { margin: 0 0 16px; font-size: 0.95rem; color: var(--page-slate); }
+.work-card-link { color: var(--page-teal); font-family: "Poppins", sans-serif; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.work-card-link:hover { text-decoration: underline; }
+.case-study-cover { width: 100%; height: auto; border-radius: 16px; display: block; margin: 0 0 32px; }
+.case-study-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.case-study-gallery figure { margin: 0; }
+.case-study-gallery img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.case-study-gallery figcaption { color: var(--page-slate); font-size: 0.85rem; margin-top: 6px; }
+@media (max-width: 640px) {
+  .cms-hero--simple, .work-hero { padding-top: 96px; }
+}
+
+/* ============================================================
+   Thank-you style hero (FlexiblePage hero_style = centered) — from the old thank-you page
+   ============================================================ */
+      .thankyou-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:60vh;padding:120px 24px 64px}
+      .thankyou-check{width:80px;height:80px;border-radius:50%;background:var(--page-gold);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+      .thankyou-check svg{width:40px;height:40px;stroke:var(--page-indigo);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .thankyou-title{font-family:'Poppins',sans-serif;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;color:var(--page-indigo);margin:0 0 16px}
+      .thankyou-text{font-family:'Lora',serif;font-size:1.05rem;color:var(--page-slate);max-width:520px;line-height:1.7;margin:0 auto 32px}
+      .thankyou-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+      .thankyou-links a{display:inline-flex;align-items:center;gap:6px;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;padding:12px 28px;border-radius:8px;text-decoration:none;transition:background .2s,color .2s}
+      .thankyou-links .primary{background:var(--page-gold);color:var(--page-indigo)}
+      .thankyou-links .primary:hover{background:var(--page-amber)}
+      .thankyou-links .secondary{border:2px solid var(--page-indigo);color:var(--page-indigo)}
+      .thankyou-links .secondary:hover{background:var(--page-indigo);color:#fff}
+
+/* Intro block directly followed by a feature grid: behave like one section (old audit page) */
+.subservice-content:has(+ .cms-includes) { padding-bottom: 0; }
+.subservice-content + .cms-includes { padding-top: 0; }
+
+/* FAQ hero spacing (old faq page: 60px below hero, larger intro) */
+.faq-hero { padding-bottom: 60px; }
+.faq-hero .cms-hero-intro { font-size: 1.1rem; margin-bottom: 0; }
+.faq-list { padding: 0 24px 64px; }

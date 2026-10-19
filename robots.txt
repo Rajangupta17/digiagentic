@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.digiagentic.com/sitemap.xml
+
+# Disallow admin/CMS areas (added when backend is deployed)
+# Disallow: /admin/
+# Disallow: /cms/

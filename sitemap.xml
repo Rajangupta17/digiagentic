@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url><loc>https://www.digiagentic.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- Services -->
+  <url><loc>https://www.digiagentic.com/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digiagentic.com/services/foundation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digiagentic.com/services/visibility/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digiagentic.com/services/credibility/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digiagentic.com/services/growth/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Service detail pages -->
+  <url><loc>https://www.digiagentic.com/services/brand-strategy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/brand-identity/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/website-design/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/ux-ui-landing-pages/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/seo-strategy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/content-marketing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/social-media/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/content-creation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/online-reputation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/google-business-profile/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/listings-directories/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/review-strategy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/google-ads/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/meta-ads/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/services/analytics-reporting/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- About section -->
+  <url><loc>https://www.digiagentic.com/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digiagentic.com/about/why-us/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digiagentic.com/about/our-approach/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Work -->
+  <url><loc>https://www.digiagentic.com/work/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digiagentic.com/work/case-study/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://www.digiagentic.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- FAQ -->
+  <url><loc>https://www.digiagentic.com/faq/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Free Audit -->
+  <url><loc>https://www.digiagentic.com/free-digital-presence-audit/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://www.digiagentic.com/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.digiagentic.com/terms-of-service/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

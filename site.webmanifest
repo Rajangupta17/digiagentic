@@ -1,0 +1,21 @@
+{
+  "name": "DigiAgentic",
+  "short_name": "DigiAgentic",
+  "description": "Build Your Digital Presence — brand, website, content and search under one strategy.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F4F5FA",
+  "theme_color": "#212467",
+  "icons": [
+    {
+      "src": "assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

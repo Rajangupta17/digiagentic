@@ -1,0 +1,179 @@
+/* ── Case Study Page ────────────────────────────────── */
+
+.case-study-hero {
+  padding: 120px 0 60px;
+}
+
+.case-study-hero h1 {
+  color: var(--page-indigo);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.case-study-lede {
+  max-width: 640px;
+  font-size: 1.1rem;
+  color: var(--page-slate);
+  margin: 0 0 48px;
+}
+
+/* ── Body content ──────────────────────────────────── */
+
+.case-study-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+}
+
+.case-study-section {
+  margin-bottom: 48px;
+}
+
+.case-study-section:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-section h2 {
+  color: var(--page-indigo);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.case-study-section p {
+  color: var(--page-ink);
+  line-height: 1.75;
+}
+
+/* ── Stats cards ───────────────────────────────────── */
+
+.case-study-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.case-study-stat {
+  padding: 28px 24px;
+  border: 1px solid var(--page-rule);
+  border-radius: 16px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(33, 36, 103, 0.08);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.case-study-stat:hover {
+  transform: translateY(-4px);
+  border-color: var(--page-gold);
+  box-shadow: 0 16px 34px rgba(33, 36, 103, 0.16);
+}
+
+.case-study-stat-value {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--page-teal);
+  line-height: 1.1;
+}
+
+.case-study-stat-label {
+  display: block;
+  margin-top: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--page-slate);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Service pills ─────────────────────────────────── */
+
+.case-study-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.case-study-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 18px;
+  border: 1px solid var(--page-rule);
+  border-radius: 999px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--page-indigo);
+  text-decoration: none;
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease, background-color 180ms ease;
+}
+
+.case-study-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--page-teal);
+  color: var(--page-teal);
+  background: rgba(32, 130, 129, 0.06);
+}
+
+/* ── Responsive ────────────────────────────────────── */
+
+@media (max-width: 680px) {
+  .case-study-hero {
+    padding: 96px 0 40px;
+  }
+
+  .case-study-lede {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  .case-study-body {
+    padding: 0 16px 48px;
+  }
+
+  .case-study-section {
+    margin-bottom: 36px;
+  }
+
+  .case-study-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .case-study-stats {
+    gap: 16px;
+  }
+
+  .case-study-stat {
+    padding: 22px 18px;
+  }
+
+  .case-study-stat-value {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-study-hero {
+    padding: 88px 0 32px;
+  }
+
+  .case-study-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study-stat,
+  .case-study-pill {
+    transition: none;
+  }
+}

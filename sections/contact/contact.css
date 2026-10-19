@@ -1,0 +1,109 @@
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: clamp(40px, 9vw, 130px);
+  padding-block: 104px;
+}
+
+.contact-copy {
+  align-self: start;
+  padding-top: 18px;
+}
+
+.contact-copy > p:not(.section-kicker) {
+  max-width: 430px;
+  color: var(--page-teal);
+  line-height: 1.75;
+}
+
+.contact-copy .contact-note {
+  margin-top: 26px;
+  padding-left: 15px;
+  border-left: 2px solid var(--page-teal);
+  color: var(--page-teal);
+  font-size: 0.9rem;
+}
+
+.contact-form {
+  padding: 32px;
+  border: 1px solid rgba(33, 36, 103, 0.16);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--page-indigo);
+  box-shadow: 0 12px 36px rgba(33, 36, 103, 0.1);
+}
+
+.form-field {
+  margin-bottom: 18px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--page-indigo);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.form-field label span {
+  color: var(--page-slate);
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid rgba(107, 113, 134, 0.45);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--page-ink);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--page-teal);
+  box-shadow: 0 0 0 3px rgba(32, 130, 129, 0.18);
+  outline: none;
+}
+
+.form-field textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+
+.contact-form .button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.form-privacy {
+  margin-top: 13px;
+  color: var(--page-slate);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 64px;
+  }
+
+  .contact-copy {
+    padding-top: 0;
+  }
+
+  .contact-form {
+    padding: 22px 18px;
+  }
+}

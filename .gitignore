@@ -1,0 +1,16 @@
+# Private documents — never publish to GitHub or the live site
+*.docx
+*.doc
+*.pdf
+*.pptx
+*.xlsx
+*.xls
+*.zip
+
+# Editor / OS junk
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build output (generated, not source)
+/dist/
