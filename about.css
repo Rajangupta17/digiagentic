@@ -1,0 +1,62 @@
+/* ============================================================
+   About section — gradient "banner" hero for FlexiblePage.
+   New classes only (cms-banner-*), so Free Audit / Thank You /
+   Privacy FlexiblePages are unaffected. Matches the Services /
+   Work gradient banner for a consistent look across the site.
+   ============================================================ */
+
+.cms-banner-hero {
+  background:
+    radial-gradient(1100px 500px at 85% -10%, rgba(32,130,129,.55), transparent 60%),
+    linear-gradient(135deg, #212467 0%, #1a1d52 55%, #14172e 100%);
+  color: #fff;
+}
+.cms-banner-wrap {
+  max-width: 1140px; margin: 0 auto;
+  padding: clamp(60px, 9vw, 104px) clamp(16px, 4vw, 24px) clamp(44px, 6vw, 72px);
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center;
+}
+.cms-banner-copy { display: grid; gap: 18px; min-width: 0; }
+
+.cms-banner-crumbs {
+  font-family: "Poppins", sans-serif; font-size: .78rem; color: #aeb2d6;
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.cms-banner-crumbs a { color: #aeb2d6; text-decoration: none; }
+.cms-banner-crumbs a:hover { color: #fff; }
+
+.cms-banner-eyebrow {
+  margin: 0; font-family: "Poppins", sans-serif; text-transform: uppercase;
+  letter-spacing: .16em; font-size: .72rem; font-weight: 600; color: var(--page-gold, #fbc731);
+}
+.landing-page .cms-banner-hero h1 {
+  margin: 0; font-family: "Poppins", sans-serif; font-weight: 700; color: #fff;
+  font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.08; text-wrap: balance; max-width: 20ch;
+}
+.cms-banner-lede { margin: 0; color: #cdd0ea; font-size: 1.12rem; line-height: 1.7; max-width: 56ch; }
+.cms-banner-actions { margin-top: 6px; }
+.cms-banner-visual { min-width: 0; }
+.cms-banner-visual img { width: 100%; height: auto; border-radius: 18px; display: block; box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+
+@media (max-width: 960px) {
+  .cms-banner-wrap { grid-template-columns: 1fr; gap: 28px; }
+  .cms-banner-visual { order: -1; max-width: 440px; }
+}
+
+/* ---- Light, safe polish shared across About FlexiblePages ---- */
+/* A touch more breathing room + a gold top-accent on numbered cards,
+   consistent with the Services tiles. Scoped to existing classes only. */
+.cms-numbered-card { position: relative; overflow: hidden; }
+.cms-numbered-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--page-gold, #fbc731), var(--page-teal, #208281));
+  opacity: 0; transition: opacity .2s ease;
+}
+.cms-numbered-card:hover::before { opacity: 1; }
+.cms-numbered-card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.cms-numbered-card:hover { transform: translateY(-4px); border-color: var(--page-teal, #208281); box-shadow: 0 16px 34px rgba(33,36,103,.12); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cms-numbered-card { transition: none; }
+  .cms-numbered-card:hover { transform: none; }
+}
