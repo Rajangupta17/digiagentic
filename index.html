@@ -106,7 +106,7 @@
       </div>
     </header>
 
-    <main class="landing-page">
+    <main class="landing-page" data-pagefind-body>
       <section class="hero-section" id="home" aria-labelledby="hero-title">
         <div class="hero-content">
           <p class="section-kicker">Digital presence strategy for ambitious businesses</p>
@@ -424,7 +424,7 @@
           <p class="contact-note">We begin with your real challenge, your market, and the outcome you want to create.</p>
           <p class="contact-note"><strong>Start with a free audit — no commitment, no lock-in.</strong></p>
         </div>
-        <form class="contact-form" action="/contact/" method="post">
+        <form class="contact-form" id="contact-form" action="https://api.digiagentic.in/api/contact/submit/" method="post" novalidate>
           <div class="form-field">
             <label for="contact-name">Your name</label>
             <input id="contact-name" name="name" type="text" autocomplete="name" required />
@@ -441,7 +441,9 @@
             <label for="contact-goal">What would you like your digital presence to do?</label>
             <textarea id="contact-goal" name="goal" rows="3" required></textarea>
           </div>
+          <div class="hp-field" aria-hidden="true" tabindex="-1" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"><label for="contact-website">Leave this empty</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
           <button class="button button-primary" type="submit">Discuss your goals <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite" hidden></p>
           <p class="form-privacy">We will use these details to respond to your enquiry.</p>
         </form>
       </section>
@@ -462,6 +464,10 @@
           </a>
           <p>Your Vision. Our Mission. Your Digital Growth.</p>
           <span>Digital presence strategy for ambitious businesses ready to turn expertise into visibility, credibility, and growth. Serving Delhi, Lucknow and across India.</span>
+          <p class="footer-contact" style="margin-top:14px;line-height:1.9;">
+            <a href="mailto:info@digiagentic.in">info@digiagentic.in</a><br />
+            <a href="tel:+919554215939">+91 95542 15939</a>
+          </p>
         </div>
         <nav class="footer-links" aria-label="Footer navigation">
           <div><h2>Explore</h2><a href="services/index.html">Services</a><a href="#approach">Our approach</a><a href="work/index.html">Our work</a></div>
@@ -470,10 +476,10 @@
         <div class="footer-social">
           <h2>Follow DigiAgentic</h2>
           <ul class="social-icon-list" aria-label="DigiAgentic social profiles">
-            <li><a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-icon-fill" cx="17.5" cy="6.8" r="1"></circle></svg></a></li>
+            <li><a href="https://www.instagram.com/digiagentic/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-icon-fill" cx="17.5" cy="6.8" r="1"></circle></svg></a></li>
             <li><a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-solid" d="M13.7 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5H17V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V13h2.8v8h3.4z"></path></svg></a></li>
             <li><a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-solid" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"></path><path class="social-icon-play" d="m9.6 15.5 6.2-3.5-6.2-3.5z"></path></svg></a></li>
-            <li><a href="#" class="social-icon" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-solid" d="M18.9 3H22l-6.8 7.8L23.2 21h-6.3L12 14.8 6.1 21H3l7.3-8.4L2.8 3h6.5l4.5 5.9L18.9 3zm-1.1 16h1.7L8.3 4.9H6.5L17.8 19z"></path></svg></a></li>
+            <li><a href="https://x.com/digiagentic" target="_blank" rel="noopener" class="social-icon" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-solid" d="M18.9 3H22l-6.8 7.8L23.2 21h-6.3L12 14.8 6.1 21H3l7.3-8.4L2.8 3h6.5l4.5 5.9L18.9 3zm-1.1 16h1.7L8.3 4.9H6.5L17.8 19z"></path></svg></a></li>
             <li><a href="#" class="social-icon" aria-label="Behance"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-solid" d="M3 5h8.1c3.1 0 4.8 1.5 4.8 4 0 1.6-.8 2.7-2.1 3.3 1.8.5 2.8 1.9 2.8 3.8 0 3-2.2 4.9-5.6 4.9H3V5zm4 3.1v3.1h3.6c1 0 1.6-.6 1.6-1.6s-.6-1.5-1.7-1.5H7zm0 6v3.7h4c1.2 0 1.9-.7 1.9-1.9s-.7-1.8-2-1.8H7zM17.5 6h5v1.8h-5V6zm5.8 9.1h-6.1c.1 1.4.9 2.2 2.2 2.2.9 0 1.6-.4 1.9-1.1h1.9c-.5 2-1.9 3.1-4 3.1-2.8 0-4.5-1.8-4.5-4.7s1.8-4.8 4.4-4.8c2.7 0 4.3 1.8 4.3 4.8v.5zm-6-1.6h4c-.1-1.1-.8-1.8-1.9-1.8-1.2 0-1.9.7-2.1 1.8z"></path></svg></a></li>
             <li><a href="#" class="social-icon" aria-label="Dribbble"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M7 4.8c4 3.1 7.1 7.8 8.8 14.3M3.2 10.1c5.1.2 10.6-1.2 14.8-4.2M5.2 18.5c3.1-4 8-6.1 15.2-5.5"></path></svg></a></li>
             <li><a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-icon-solid" d="M5.2 8.7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM3.5 10h3.4v10H3.5V10zm5.4 0h3.3v1.4h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-4.6c0-1.1 0-2.6-1.6-2.6s-1.9 1.2-1.9 2.5V20H8.9V10z"></path></svg></a></li>
@@ -487,5 +493,55 @@
         <a href="#home">Back to top &uarr;</a>
       </div>
     </footer>
+    <script>
+    /* Contact form → DigiAgentic API (saves to CMS + emails). Graceful, no dependency. */
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      var status = document.getElementById('contact-status');
+      var btn = form.querySelector('button[type="submit"]');
+      var els = form.elements;
+      function show(text, ok) {
+        if (!status) { return; }
+        status.textContent = text;
+        status.style.marginTop = '14px';
+        status.style.fontWeight = '600';
+        status.style.color = ok ? '#208281' : '#c0392b';
+        status.hidden = false;
+      }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (status) status.hidden = true;
+        var payload = {
+          name: (els['name'].value || '').trim(),
+          email: (els['email'].value || '').trim(),
+          company: (els['business'].value || '').trim(),
+          message: (els['goal'].value || '').trim(),
+          website: els['website'] ? els['website'].value : ''
+        };
+        var orig = btn.innerHTML;
+        btn.disabled = true; btn.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok && res.d && res.d.success) {
+            form.reset();
+            show(res.d.message || "Thank you! We'll get back to you within 24 hours.", true);
+          } else {
+            show('Please check the form and try again, or email info@digiagentic.in.', false);
+          }
+        })
+        .catch(function () {
+          show('Could not send right now. Please email info@digiagentic.in.', false);
+        })
+        .finally(function () { btn.disabled = false; btn.innerHTML = orig; });
+      });
+    })();
+    </script>
+    <script src="search.js" defer></script>
   </body>
 </html>
