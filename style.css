@@ -12,7 +12,7 @@
   --page-slate: #6b7186;
   --page-mist: #f5f6fa;
   --page-rule: rgba(33, 36, 103, 0.16);
-  --page-content-width: 1600px;
+  --page-content-width: 1280px;
   background: transparent;
   color: #0d0d12;
   font-family: "Lora", Georgia, serif;
@@ -519,3 +519,55 @@ body {
     transition: none;
   }
 }
+
+/* ============================================================
+   In-site search (Pagefind) modal
+   ============================================================ */
+:root {
+  --pagefind-ui-primary: #212467;
+  --pagefind-ui-text: #14172e;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: rgba(33, 36, 103, 0.14);
+  --pagefind-ui-tag: #f5f6fa;
+  --pagefind-ui-border-radius: 10px;
+  --pagefind-ui-font: "Poppins", "Segoe UI", sans-serif;
+}
+.site-search-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(13, 13, 18, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(16px, 6vh, 90px) 16px 16px;
+  overflow-y: auto;
+}
+.site-search-modal[hidden] { display: none; }
+.site-search-box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 22px 20px;
+  box-shadow: 0 30px 70px rgba(13, 13, 18, 0.4);
+}
+.site-search-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #6b7186;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.site-search-close:hover { background: #f5f6fa; color: #212467; }
+#pf-search { margin-top: 6px; }
