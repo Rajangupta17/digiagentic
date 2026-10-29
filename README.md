@@ -2,25 +2,28 @@
 
 > A production digital-agency platform I took from a blank page to a deployed, tested, edge-served product — **concept, branding, UI/UX, full-stack development, testing, and CI/CD** — using AI-assisted development to move at a team's pace alone.
 
-**Live:** [digiagentic.in](https://digiagentic.in) · **Stack:** Django 5 · Wagtail 6 · DRF · Cloudflare Workers · Render · Neon Postgres
+### 🔗 Live site → **[digiagentic.in](https://digiagentic.in)**
+
+**Stack:** Django 5 · Wagtail 6 · DRF · Cloudflare Workers · Render · Neon Postgres
+
+<!-- Add a screenshot of the live site here. Put the image in a /docs folder and uncomment: -->
+<!-- ![DigiAgentic home page](docs/screenshot-home.png) -->
 
 ---
 
 ## TL;DR
 
-I built an entire digital-agency product end to end — not just the code. I defined the brand, designed the experience, chose the architecture, wrote the backend and front end, added a test suite, set up a 3-environment CI/CD pipeline across two cloud platforms, and shipped it live. Along the way I debugged and hardened real production issues (CORS, rate-limiting behind a CDN, email on an SMTP-blocked host, a silent API bug). I used **prompt engineering and AI-assisted development** as a force-multiplier, and I can explain every architectural decision in it.
+I built an entire digital-agency product end to end — not just the code. I defined the brand, designed the experience, chose the architecture, wrote the backend and front end, added a test suite, set up a 3-environment deploy pipeline (auto-deploy to Render, edge deploys to Cloudflare), and shipped it live. Along the way I debugged and hardened real production issues (CORS, rate-limiting behind a CDN, email on an SMTP-blocked host, a silent API bug). I used **prompt engineering and AI-assisted development** as a force-multiplier, and I can explain every architectural decision in it.
 
 ---
 
 ## 1. The problem
 
-A small business needs a website that actually brings in customers, but every normal option has a catch:
+A business website has to do four things at once: be **easy for the team to update**, **fast for visitors**, **secure**, and **affordable to run**. In practice these goals pull against each other — a site that's simple to manage tends to be slower and higher-maintenance, while a site built for speed and security usually needs a developer for every change.
 
-- **WordPress** — easy to edit, but slow, frequently hacked, and needs paid hosting + constant upkeep.
-- **Hand-coded** — fast and secure, but every content change needs a developer, so the owner is stuck waiting.
-- **Website builders (Wix/Squarespace)** — simple but generic, limited, and a forever monthly bill.
+**The challenge I set out to solve:** design one system that delivers all four. Non-technical editors should be able to manage content freely, while visitors get a fast, secure site served from the global edge — the flexibility of a CMS with the performance and safety of a static site, running on a minimal budget.
 
-**The goal:** one site that is *editor-manageable, fast, secure, discoverable, and nearly free to run* — without choosing between flexibility and performance.
+The rest of this README is how I approached it, built it, and shipped it.
 
 ---
 
